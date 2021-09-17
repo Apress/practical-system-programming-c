@@ -20,7 +20,7 @@ int main(){
     status = pthread_create(&thread, NULL, customThreadFunction, NULL);
 
     /*  status = 0 ==> If thread is created Sucessfully.
-        status = 1 ==> If thread is unable to create.   */
+        everything else ==> If thread is unable to create.   */
 
     if(!status){
         printf("Custom Created Successfully.\n");
