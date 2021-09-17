@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<fcntl.h>
-
-int close(int file_descriptor);
+#include<unistd.h>
 
 int main(){
 
