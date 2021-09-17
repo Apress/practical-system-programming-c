@@ -6,7 +6,7 @@
 
 int main() { 
   
-  char *filename;
+  char filename[50];
   printf("Enter the filename to open:");
   scanf("%[^\n]%*c", filename);
   int file_descriptor = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0777); 
