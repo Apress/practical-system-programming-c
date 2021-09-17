@@ -21,7 +21,7 @@ int main() {
 
   int size = write(file_descriptor, content, strlen(content)); 
   
-  printf("%d %lu %d", file_descriptor, strlen(content), size); 
+  printf("%d %lu %d", file_descriptor, (unsigned long)strlen(content), size); 
   
   close(file_descriptor); 
 
