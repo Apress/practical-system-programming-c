@@ -7,7 +7,7 @@ int main(){
     char filename[50];
 
     printf("Enter the filename: ");
-    scanf("%[^\n]s*c", filename);
+    scanf("%[^\n]s%*c", filename);
     // Setting Permission in 3rd argument only take effect if file not yet exists
     file_descriptor = creat(filename, O_RDWR | O_CREAT, 0600);
 
