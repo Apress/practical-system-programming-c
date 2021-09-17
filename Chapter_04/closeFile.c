@@ -12,7 +12,7 @@ int main(){
     // Setting Permission to Read Write for the file.
     file_descriptor = open(filename, O_RDWR, 0);
 
-    if(file_descriptor == 3){
+    if(file_descriptor != -1){
         printf("File Opened Successfully!\n");
     }else{
         printf("Unable to Open the File.\n");
