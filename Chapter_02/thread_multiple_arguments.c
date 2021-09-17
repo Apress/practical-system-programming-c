@@ -4,9 +4,9 @@
 
 // Data Collector.
 struct arguments {
-    char* name;
+    char name[50];
     int age;
-    char *bloodGroup;
+    char bloodGroup[5];
 };
 
 // Thread Function
@@ -19,23 +19,17 @@ void *sayGreetings(void *data) {
 
 int main() {
 
-    struct arguments *person = (struct arguments *)malloc(sizeof(struct arguments));
+    struct arguments person;
     printf("This is a Simple Data Collection Application\n");
-    char bloodGroup[5], name[50];
-    int age;
     printf("Enter the name of the person: ");
-    fgets(name, 50, stdin);
+    fgets(person.name, 50, stdin);
     printf("Enter the age of the person: ");
-    scanf("%d",&age);
+    scanf("%d",person.age);
     printf("Enter the person's Blood Group: ");
-    scanf("%s", bloodGroup);
-
-    person->name = name;
-    person->age = age;
-    person->bloodGroup = bloodGroup;
+    scanf("%s", person.bloodGroup);
 
     pthread_t thread;
-    pthread_create(&thread, NULL, sayGreetings, (void *)person);
+    pthread_create(&thread, NULL, sayGreetings, (void *)&person);
     pthread_join(thread, NULL);
     return 0;
 }
