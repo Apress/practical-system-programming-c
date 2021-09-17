@@ -9,7 +9,7 @@ int main(){
 
     printf("Enter the filename: ");
     scanf("%[^\n]%*c", filename);
-    // Setting Permission to Read Write for the file.
+    // Opening for read and write (3rd argument ignored as there is no O_CREAT)
     file_descriptor = open(filename, O_RDWR, 0);
 
     if(file_descriptor != -1){
