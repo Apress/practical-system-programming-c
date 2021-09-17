@@ -8,7 +8,7 @@ int main(){
 
     printf("Enter the filename: ");
     scanf("%[^\n]%*c", filename);
-    // Setting Permission to Read Only for the file.
+    // Open file for reading.
     file_descriptor = open(filename, O_RDONLY);
     
     if(file_descriptor != -1){
