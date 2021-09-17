@@ -4,6 +4,7 @@
 void *sayGreetings(void *input) {
     printf("Hello %s\n", (char *)input);
     pthread_exit(NULL);
+    return NULL;
 }
 
 int main() {
