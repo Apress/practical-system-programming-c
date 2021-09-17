@@ -14,7 +14,7 @@ int main() {
      perror("File not Found.!"); 
      exit(1); 
   }
-  char *content;
+  char content[100];
 
   printf("Enter the content to write on a given file: ");
   scanf("%[^\n]%*c", content);
