@@ -4,14 +4,14 @@
 int main(){
 
     int file_descriptor;
-    char *filename;
+    char filename[50];
 
     printf("Enter the filename: ");
-    scanf("%s", filename);
-    // Setting Permission to Read Write for the file.
-    file_descriptor = creat(filename, O_RDWR | O_CREAT);
+    scanf("%[^\n]s%*c", filename);
+    // Setting Permission in 3rd argument only take effect if file not yet exists
+    file_descriptor = creat(filename, O_RDWR | O_CREAT, 0600);
 
-    if(file_descriptor == 3){
+    if(file_descriptor != -1){
         printf("File Created Successfully!");
     }else{
         printf("Unable to Create the File.");

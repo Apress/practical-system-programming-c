@@ -15,7 +15,7 @@ int main(){
     printf("Enter the new permission set: ");
     // Permission Set value starts with 0.
     // Eg: if i want to set 444 to a particular file then i need to give like 0444.
-    scanf("%d", &new_permission_value);
+    scanf("%i", &new_permission_value);
 
     // Setting the Permissions
     permission_status = chmod(filepath, new_permission_value);

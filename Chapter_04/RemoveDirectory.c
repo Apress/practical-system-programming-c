@@ -7,7 +7,7 @@ int rmdir(char *dirname);
 int main(){
 
     int isRemoved;
-    char *DIR_NAME;
+    char DIR_NAME[75];
     printf("Enter the Directory name you want to create: ");
     scanf("%[^\n]%*c", DIR_NAME);
     isRemoved = rmdir(DIR_NAME);

@@ -6,7 +6,7 @@
 
 int main() { 
   
-  char *filename;
+  char filename[50];
   printf("Enter the filename to open:");
   scanf("%[^\n]%*c", filename);
   int file_descriptor = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0777); 
@@ -14,14 +14,14 @@ int main() {
      perror("File not Found.!"); 
      exit(1); 
   }
-  char *content;
+  char content[100];
 
   printf("Enter the content to write on a given file: ");
   scanf("%[^\n]%*c", content);
 
   int size = write(file_descriptor, content, strlen(content)); 
   
-  printf("%d %lu %d", file_descriptor, strlen(content), size); 
+  printf("%d %lu %d", file_descriptor, (unsigned long)strlen(content), size); 
   
   close(file_descriptor); 
 
