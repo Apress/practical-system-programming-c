@@ -6,8 +6,8 @@
 int main() { 
   
   int file_descriptor, size;
-  char *filename;
-  char *content = (char *) calloc(100, sizeof(char)); 
+  char filename[50];
+  char content[100]; 
 
   printf("Enter the filename to read:");
   scanf("%[^\n]%*c",filename);
@@ -29,4 +29,4 @@ int main() {
   close(file_descriptor);
 
   return 0;
-} 
+}
