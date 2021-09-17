@@ -6,7 +6,7 @@
 int main(){
 
     int isCreated;
-    char *DIR_NAME;
+    char DIR_NAME[75];
     printf("Enter the Directory name you want to create: ");
     scanf("%[^\n]%*c", DIR_NAME);
     // You can Set your own permissions based on your Requirements.
