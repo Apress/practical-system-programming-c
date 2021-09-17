@@ -23,7 +23,7 @@ int main(){
     if(close_status == 0){
         printf("File Descriptor is closed Succesfully\n");
     }else{
-        printf("File Descriptor is not closed\n");
+        printf("File Descriptor may no not be closed\n");
     }
 
     return 0;
