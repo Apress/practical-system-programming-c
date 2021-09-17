@@ -6,10 +6,10 @@ int close(int file_descriptor);
 int main(){
 
     int file_descriptor;
-    char *filename;
+    char filename[50];
 
     printf("Enter the filename: ");
-    scanf("%s", filename);
+    scanf("%[^\n]%*c", filename);
     // Setting Permission to Read Write for the file.
     file_descriptor = open(filename, O_RDWR, 0);
 
