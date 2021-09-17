@@ -8,8 +8,8 @@ int main(){
 
     printf("Enter the filename: ");
     scanf("%[^\n]s*c", filename);
-    // Setting Permission to Read Write for the file.
-    file_descriptor = creat(filename, O_RDWR | O_CREAT);
+    // Setting Permission in 3rd argument only take effect if file not yet exists
+    file_descriptor = creat(filename, O_RDWR | O_CREAT, 0600);
 
     if(file_descriptor != -1){
         printf("File Created Successfully!");
